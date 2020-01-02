@@ -1,0 +1,72 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    height: 60px;
+    font-size: 3rem;
+    font-family: 'Istok Web', sans-serif;
+    background-color: #42b724;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 4px 4px #161a0082;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    padding: 10px;
+    height: 100%;
+    width: 200px;
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.header__logo a {
+    text-decoration: none;
+    color: #373737;
+}
+
+.header__nav {
+    flex-grow: 1;
+}
+
+.header__list {
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__item {
+    width: 100%;
+    border-left: 1px solid #373737;
+    padding: 10px;
+    height: 40px;
+}
+
+.header__item:hover {
+    background: linear-gradient(#42b724, #78c664);
+    cursor: pointer;
+}
+
+.header__item a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: unset;
+}
+
+.header__span {
+    color: #ffffff;
+}
+
+.header__item:last-child a::before{
+    content: url('/src/app/images/profile-icon.png');
+    vertical-align: sub;
+}

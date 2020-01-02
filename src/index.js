@@ -1,3 +1,1 @@
-import Pook from "./modules/config";
-
-Pook();
+import './app/header/header.css'
