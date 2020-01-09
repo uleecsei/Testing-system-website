@@ -1,0 +1,115 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+    height: 0px;
+    transition: height 0.5s ease-in-out;
+}
+
+.slider.shown {
+    height: 332px;
+    transition: height 0.5s ease-in-out;
+} 
+
+.slider__wrapper {
+    display: flex;
+    transition: transform 0.4s ease-out;
+}
+
+.slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider__control {
+    position: absolute;
+    top: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    height: 40px;
+    transform: translateY(-50%);
+}
+
+.slider__control_show {
+    display: flex;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+}
+
+.slider__control_left {
+    left: 0;
+    background-image: url('/src/app/images/arrow-left.png');
+}
+
+.slider__control_right {
+    right: 0;
+    background-image: url('/src/app/images/arrow-right.png');
+}
+
+.slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.slider__item>iframe {
+    margin: 0 auto;
+}
+
+.hide-slider {
+    height: 40px;
+    background-color: #757575;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.hide-slider_top {
+    border-radius: 20px 20px 0 0;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.hide-slider_bottom {
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    box-shadow: 2px 11px 5px -6px rgba(0,0,0,0.75);
+}
+
+.hide-slider_top > h2 {
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 2.3rem;
+}
+
+#hide-slider__button {
+    display: none;
+}
+
+#hide-slider__label {
+    display: inline-block;
+    margin-top: 7px;
+    height: 22px;
+    cursor: pointer;
+}

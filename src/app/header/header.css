@@ -1,20 +1,10 @@
-html {
-    font-size: 10px;
-}
-
-body {
-    margin: 0;
-}
-
 .header {
     height: 60px;
-    font-size: 3rem;
-    font-family: 'Istok Web', sans-serif;
     background-color: #42b724;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 0 4px 4px #161a0082;
     display: flex;
-    justify-content: space-between;
+    white-space: nowrap;
 }
 
 .header__logo {
@@ -32,10 +22,11 @@ body {
 }
 
 .header__nav {
-    flex-grow: 1;
+    width: 65%;
 }
 
 .header__list {
+    font-size: 2.7rem;
     text-align: center;
     margin: 0;
     list-style: none;
@@ -46,9 +37,10 @@ body {
 
 .header__item {
     width: 100%;
-    border-left: 1px solid #373737;
-    padding: 10px;
-    height: 40px;
+    border-left: 1px solid #757575;
+    padding-top: 12px;
+    padding-bottom: 22px;
+    height: 26px;
 }
 
 .header__item:hover {
@@ -66,7 +58,40 @@ body {
     color: #ffffff;
 }
 
-.header__item:last-child a::before{
-    content: url('/src/app/images/profile-icon.png');
+.header__item:last-child {
+    border-right: 1px solid #757575;
+}
+
+.header__item:last-child a > img {
     vertical-align: sub;
+    margin-top: -4px;
+}
+
+.header__item:nth-child(-n + 2) {
+    width: 70%;
+}
+
+.header__search {
+    margin: 18px auto;
+}
+
+.header__search > #search {
+    height: 20px;
+    border-radius: 5px;
+    width: 130px;
+    font-size: 1.5rem;
+    vertical-align: top;
+}
+
+.header__search > #search-submit {
+    display: none;
+}
+
+.header__search > label {
+    display: inline-block;
+    margin: 3px;
+}
+
+.header__search > label:hover {
+    cursor: pointer;
 }

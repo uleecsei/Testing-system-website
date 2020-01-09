@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/dist/app.css">
     <title>TestsFE.ua</title>
 </head>
@@ -17,19 +17,84 @@
             <div class="header__logo"><a href="#">Tests<span class="header__span">FE</span>.ua</a></div>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a href="#">HTML</a></li>
-                    <li class="header__item"><a href="#">CSS</a></li>
-                    <li class="header__item"><a href="#">JavaScript</a></li>
+                    <li class="header__item"><a href="#">HTML <img src="/src/app/images/arrow-down.png"
+                                alt="arrow-down"></a></li>
+                    <li class="header__item"><a href="#">CSS <img src="/src/app/images/arrow-down.png"
+                                alt="arrow-down"></a></li>
+                    <li class="header__item"><a href="#">JavaScript <img src="/src/app/images/arrow-down.png"
+                                alt="arrow-down"></a></li>
                     <li class="header__item"><a href="#">Контакти</a></li class="header__item">
-                    <li class="header__item"><a href="#">Профіль</a></li>
+                    <li class="header__item"><a href="#"><img src="/src/app/images/profile-icon.png"
+                                alt="profile-icon">Профіль</a></li>
                 </ul>
             </nav>
+            <div class="header__search">
+                <input id="search" type="text" placeholder="Пошук...">
+                <label for="search-submit"><img src="/src/app/images/search.png" alt="search-icon"></label>
+                <input id="search-submit" type="button">
+            </div>
         </header>
-        <div id="app-index"></div>
+
+        <div id="app-index">
+            <div class="hide-slider hide-slider_top">
+                <h2>Корисні відео для новачків</h2>
+            </div>
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__item">
+                        <div class="slider__iframe">
+                            <iframe width="600" height="336" src="https://www.youtube.com/embed/8mK5aY5YOCc"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__iframe">
+                            <iframe width="600" height="336" src="https://www.youtube.com/embed/NkmZl1Yy94Q"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__iframe">
+                            <iframe width="600" height="336" src="https://www.youtube.com/embed/As112XYv15w"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__iframe">
+                            <iframe width="600" height="336" src="https://www.youtube.com/embed/W6NZfCO5SIk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <a class="slider__control slider__control_left" href="#"></a>
+                <a class="slider__control slider__control_right slider__control_show" href="#"></a>
+            </div>
+            <div class="hide-slider hide-slider_bottom">
+                <label for="hide-slider__button" id="hide-slider__label"><img src="./src/app/images/arrow-down.png" alt="arrow-down"></label>
+                <input type="button" id="hide-slider__button">
+            </div>
+
+            <main class="main">
+                <div class="main__wrapper">
+
+                </div>
+            </main>
+        </div>
         <div id="app-html"></div>
         <div id="app-css"></div>
         <div id="app-js"></div>
         <div id="app-contacts"></div>
+        <footer class="footer" style="display: none;">
+
+        </footer>
     </div>
     <script src="./dist/app.js"></script>
 </body>
