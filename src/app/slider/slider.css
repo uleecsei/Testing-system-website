@@ -103,11 +103,11 @@
     font-size: 2.3rem;
 }
 
-#hide-slider__button {
+.hide-slider__button {
     display: none;
 }
 
-#hide-slider__label {
+.hide-slider__label {
     display: inline-block;
     margin-top: 7px;
     height: 22px;

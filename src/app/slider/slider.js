@@ -73,9 +73,9 @@ function sliderMain() {
 }
 
 function hideSlider() {
-    let button = document.getElementById('hide-slider__button');
+    let button = document.querySelector('.hide-slider__button');
     let slider = document.getElementsByClassName('slider')[0];
-    let labelImg = document.getElementById('hide-slider__label').firstChild;
+    let labelImg = document.querySelector('.hide-slider__label').firstChild;
 
     button.addEventListener('click', function(){
         slider.classList.toggle('shown');
@@ -86,7 +86,7 @@ function hideSlider() {
         else {
             labelImg.src = './src/app/images/arrow-down.png';
         }
-    })
+    });
 }
 
 hideSlider();
