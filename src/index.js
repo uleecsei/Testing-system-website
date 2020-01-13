@@ -1,13 +1,17 @@
-import './app/header/header.css';
-import './app/header/header.js';
+import './app/indexPage/header/header.css';
+import './app/indexPage/header/header.js';
 
-import './app/slider/slider.css';
-import './app/slider/slider.js'
+import './app/indexPage/slider/slider.css';
+import './app/indexPage/slider/slider.js'
 
-import './app/main/main.css';
-import './app/main/main.js';
+import './app/indexPage/main/main.css';
+import './app/indexPage/main/main.js';
 
 import './app/footer/footer.css';
 
-import './app/login/login.css';
-import './app/login/login.js'
+import './app/indexPage/login/login.css';
+import './app/indexPage/login/login.js'
+
+import './app/Router.js';
+
+import './app/contentPage/main/main_content.css';

@@ -81,10 +81,10 @@ function hideSlider() {
         slider.classList.toggle('shown');
         const shown = slider.classList.contains('shown');
         if(shown) {
-            labelImg.src = './src/app/images/arrow-up.png';
+            labelImg.src = './src/app/indexPage/images/arrow-up.png';
         }
         else {
-            labelImg.src = './src/app/images/arrow-down.png';
+            labelImg.src = './src/app/indexPage/images/arrow-down.png';
         }
     });
 }

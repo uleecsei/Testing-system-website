@@ -11,6 +11,10 @@
     transition: height 0.5s ease-in-out;
 }
 
+iframe {
+    border: 0;
+}
+
 .slider.shown {
     height: 332px;
     transition: height 0.5s ease-in-out;
@@ -56,12 +60,12 @@
 
 .slider__control_left {
     left: 0;
-    background-image: url('/src/app/images/arrow-left.png');
+    background-image: url('../images/arrow-left.png');
 }
 
 .slider__control_right {
     right: 0;
-    background-image: url('/src/app/images/arrow-right.png');
+    background-image: url('../images/arrow-right.png');
 }
 
 .slider__control::before {

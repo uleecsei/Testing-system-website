@@ -9,6 +9,10 @@ body {
     background-color: #a8b3aa;
 }
 
+.show-page {
+    display: block !important;
+}
+
 .main__wrapper {
     width: 80vw;
     height: 1200px;
@@ -31,9 +35,48 @@ body {
 }
 
 .main__tools {
+    display: flex;
+    justify-content: space-between;
     width: 80vw;
     height: 50px;
     background-color: #757575;
     margin: 20px auto 0 auto;
     border-radius: 20px 20px 0 0;
+}
+
+.main__breadcrumbs {
+    font-size: 1.9rem;
+    color: #000000 !important;
+    align-items: center;
+    display: flex;
+    margin-left: 40px;
+    width: 50%;
+    height: 100%;
+}
+
+.main__assortment {
+    margin-right: 40px;
+    padding-top: 10px;
+}
+
+.main__select {
+    height: 30px;
+    font-size: 1.2rem;
+    background-color: #dadada;
+}
+
+.main__crumb {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main__crumb_current {
+    text-decoration: none;
+    cursor: unset;
+}
+
+.main__crumb_current::before{
+    content: '→';
+    display: inline-block;
+    margin: 0 5px;
 }

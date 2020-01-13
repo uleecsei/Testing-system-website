@@ -7,8 +7,9 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist'
+        path: path.resolve(__dirname, 'dist'),
+        // Удалить при сдаче
+        publicPath: "/dist/"
     },
     module: {
         rules: [{
@@ -31,15 +32,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: 'assets/[name].[ext]',
-                }
-            }
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: 'assets/[name].[ext]'
+                    }
+                }],
+            },
         ]
     },
     plugins: [new MiniCssExtractPlugin({
         filename: '[name].css'
-    })]
+    })],
 }

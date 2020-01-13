@@ -7,36 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/app.css">
+    <link rel="stylesheet" href="dist/app.css">
     <title>TestsFE.ua</title>
 </head>
 
 <body>
     <div id="app">
         <header class="header">
-            <div class="header__logo"><a href="#">Tests<span class="header__span">FE</span>.ua</a></div>
+            <div class="header__logo"><a href="#" class="route">Tests<span class="header__span">FE</span>.ua</a></div>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item header__item_html"><a href="#">HTML <img
-                                src="/src/app/images/arrow-down.png" alt="arrow-down"></a></li>
-                    <li class="header__item header__item_css"><a href="#">CSS <img src="/src/app/images/arrow-down.png"
-                                alt="arrow-down"></a></li>
-                    <li class="header__item header__item_javascript"><a href="#">JavaScript <img
-                                src="/src/app/images/arrow-down.png" alt="arrow-down"></a></li>
-                    <li class="header__item header__item_contact"><a href="#">Контакти</a></li class="header__item">
-                    <li class="header__item header__item_profile"><a href="#"><img
-                                src="/src/app/images/profile-icon.png" alt="profile-icon">Профіль</a></li>
+                    <li class="header__item header__item_html"><a href="#app-html" class="route">HTML <img
+                                src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down"></a>
+                        <div class="header__dropdown_html header__dropdown">
+                            <a href="#" class="route">HTML тести для новачків</a>
+                            <a href="#" class="route">HTML продвинуті тести</a>
+                        </div>
+                    </li>
+                    <li class="header__item header__item_css"><a href="#app-css" class="route">CSS <img
+                                src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down"></a>
+                        <div class="header__dropdown_css header__dropdown">
+                            <a href="#" class="route">CSS тести для новачків</a>
+                            <a href="#" class="route">CSS продвинуті тести</a>
+                        </div>
+                    </li>
+                    <li class="header__item header__item_javascript"><a href="#app-js" class="route">JavaScript <img
+                                src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down"></a>
+                        <div class="header__dropdown_js header__dropdown">
+                            <a href="#" class="route">JS тести для новачків</a>
+                            <a href="#" class="route">JS продвинуті тести</a>
+                            <a href="#" class="route">ES6 тести</a>
+                        </div>
+                    </li>
+                    <li class="header__item header__item_contact"><a href="#app-contacts" class="route">Контакти</a>
+                    </li>
+                    <li class="header__item header__item_profile"><a href="#" class="route"><img
+                                src="./src/app/indexPage/images/profile-icon.png" alt="profile-icon">Профіль</a></li>
                 </ul>
             </nav>
             <div class="header__search">
                 <input class="search" type="text" placeholder="Пошук...">
-                <label><img src="/src/app/images/search.png" alt="search-icon">
-                    <input class="search-submit" type="button">
+                <label><img src="./src/app/indexPage/images/search.png" alt="search-icon">
+                    <input class="search-submit" type="button" value="search">
                 </label>
             </div>
         </header>
 
-        <div id="app-index">
+        <div id="app-index" class="show-page page">
             <div class="hide-slider hide-slider_top">
                 <h2>Корисні відео для новачків</h2>
             </div>
@@ -45,7 +62,6 @@
                     <div class="slider__item">
                         <div class="slider__iframe">
                             <iframe width="600" height="336" src="https://www.youtube.com/embed/8mK5aY5YOCc"
-                                frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -53,7 +69,6 @@
                     <div class="slider__item">
                         <div class="slider__iframe">
                             <iframe width="600" height="336" src="https://www.youtube.com/embed/NkmZl1Yy94Q"
-                                frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -61,7 +76,6 @@
                     <div class="slider__item">
                         <div class="slider__iframe">
                             <iframe width="600" height="336" src="https://www.youtube.com/embed/As112XYv15w"
-                                frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -69,7 +83,6 @@
                     <div class="slider__item">
                         <div class="slider__iframe">
                             <iframe width="600" height="336" src="https://www.youtube.com/embed/W6NZfCO5SIk"
-                                frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -79,21 +92,25 @@
                 <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
             </div>
             <div class="hide-slider hide-slider_bottom">
-                <label class="hide-slider__label"><img src="./src/app/images/arrow-down.png" alt="arrow-down">
-                    <input type="button" class="hide-slider__button">
+                <label class="hide-slider__label"><img src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down">
+                    <input type="button" class="hide-slider__button" value="hide-slider">
                 </label>
             </div>
 
             <main class="main">
                 <div class="main__tools">
-                    <div class="main__breadcrumbs"></div>
+                    <div class="main__breadcrumbs">
+                        <!-- <div class="main__crumb">Головна</div>
+                        <div class="main__crumb">HTML</div>
+                        <div class="main__crumb main__crumb_current">Середній</div> -->
+                    </div>
                     <div class="main__assortment">
-                        <select name="main__sort">
+                        <select name="sort" class="main__sort main__select">
                             <option value="0">Сортувати по:</option>
                             <option value="sort1">sort1</option>
                             <option value="sort2">sort2</option>
                         </select>
-                        <select name="main__filter">
+                        <select name="filter" class="main__filter main__select">
                             <option value="0">Фільтрувати за:</option>
                             <option value="filter1">filter1</option>
                             <option value="filter2">filter2</option>
@@ -101,6 +118,7 @@
                     </div>
                 </div>
                 <div class="main__wrapper">
+                    <h1>Головна</h1>
                     <div class="main__item">1</div>
                     <div class="main__item">2</div>
                     <div class="main__item">3</div>
@@ -112,19 +130,150 @@
                 </div>
             </main>
         </div>
-        <div id="app-html"></div>
-        <div id="app-css"></div>
-        <div id="app-js"></div>
-        <div id="app-contacts"></div>
+        <div id="app-html" class="page">
+            <h1>HTMLpage</h1>
+            <div class="main">
+                <div class="main__tools">
+                    <div class="main__breadcrumbs">
+                        <!-- <div class="main__crumb">Головна</div>
+                        <div class="main__crumb">HTML</div>
+                        <div class="main__crumb main__crumb_current">Середній</div> -->
+                    </div>
+                    <div class="main__assortment">
+                        <select name="sort" class="main__sort main__select">
+                            <option value="0">Сортувати по:</option>
+                            <option value="sort1">sort1</option>
+                            <option value="sort2">sort2</option>
+                        </select>
+                        <select name="filter" class="main__filter main__select">
+                            <option value="0">Фільтрувати за:</option>
+                            <option value="filter1">filter1</option>
+                            <option value="filter2">filter2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main__wrapper">
+
+                </div>
+            </div>
+        </div>
+        <div id="app-css" class="page">
+            <h1>CSSpage</h1>
+            <div class="main">
+                <div class="main__tools">
+                    <div class="main__breadcrumbs">
+                        <!-- <div class="main__crumb">Головна</div>
+                        <div class="main__crumb">HTML</div>
+                        <div class="main__crumb main__crumb_current">Середній</div> --> 
+                    </div>
+                    <div class="main__assortment">
+                        <select name="sort" class="main__sort main__select">
+                            <option value="0">Сортувати по:</option>
+                            <option value="sort1">sort1</option>
+                            <option value="sort2">sort2</option>
+                        </select>
+                        <select name="filter" class="main__filter main__select">
+                            <option value="0">Фільтрувати за:</option>
+                            <option value="filter1">filter1</option>
+                            <option value="filter2">filter2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main__wrapper">
+
+                </div>
+            </div>
+        </div>
+        <div id="app-js" class="page">
+            <h1>JSpage</h1>
+            <div class="main">
+                <div class="main__tools">
+                    <div class="main__breadcrumbs">
+                        <!-- <div class="main__crumb">Головна</div>
+                        <div class="main__crumb">HTML</div>
+                        <div class="main__crumb main__crumb_current">Середній</div> -->
+                    </div>
+                    <div class="main__assortment">
+                        <select name="sort" class="main__sort main__select">
+                            <option value="0">Сортувати по:</option>
+                            <option value="sort1">sort1</option>
+                            <option value="sort2">sort2</option>
+                        </select>
+                        <select name="filter" class="main__filter main__select">
+                            <option value="0">Фільтрувати за:</option>
+                            <option value="filter1">filter1</option>
+                            <option value="filter2">filter2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main__wrapper">
+
+                </div>
+            </div>
+        </div>
+        <div id="app-contacts" class="page">
+            <h1>Contacts-page</h1>
+            <div class="main">
+                <div class="main__tools">
+                    <div class="main__breadcrumbs">
+                        <!-- <div class="main__crumb">Головна</div>
+                        <div class="main__crumb">HTML</div>
+                        <div class="main__crumb main__crumb_current">Середній</div> -->
+                    </div>
+                    <div class="main__assortment">
+                        <select name="sort" class="main__sort main__select">
+                            <option value="0">Сортувати по:</option>
+                            <option value="sort1">sort1</option>
+                            <option value="sort2">sort2</option>
+                        </select>
+                        <select name="filter" class="main__filter main__select">
+                            <option value="0">Фільтрувати за:</option>
+                            <option value="filter1">filter1</option>
+                            <option value="filter2">filter2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main__wrapper">
+
+                </div>
+            </div>
+        </div>
+        <div id="app-profile" class="page">
+            <h1>Profile-page</h1>
+            <div class="main">
+                <div class="main__tools">
+                    <div class="main__breadcrumbs">
+                        <!-- <div class="main__crumb">Головна</div>
+                        <div class="main__crumb">HTML</div>
+                        <div class="main__crumb main__crumb_current">Середній</div> -->
+                    </div>
+                    <div class="main__assortment">
+                        <select name="sort" class="main__sort main__select">
+                            <option value="0">Сортувати по:</option>
+                            <option value="sort1">sort1</option>
+                            <option value="sort2">sort2</option>
+                        </select>
+                        <select name="filter" class="main__filter main__select">
+                            <option value="0">Фільтрувати за:</option>
+                            <option value="filter1">filter1</option>
+                            <option value="filter2">filter2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main__wrapper">
+
+                </div>
+            </div>
+        </div>
         <footer class="footer">
 
         </footer>
         <div class="login">
-        <div class="login__background"></div>
-        <label class="login__quit-label"><img src="./src/app/images/x-mark.png" alt="X">
-        <input class="login__quit" type="button">
-        </label>
-            <form action="" class="login__form">
+            <div class="login__background"></div>
+            <label class="login__quit-label"><img src="./src/app/indexPage/images/x-mark.png" alt="X">
+                <input class="login__quit" type="button" value="quit">
+            </label>
+            <form class="login__form">
                 <h1>Зареєструватися</h1>
                 <div class="login__form__enter">Вже маєте аккаунт? <a href="#">Увійти</a></div>
                 <input type="text" class="login__form__name" placeholder="Ім'я">
