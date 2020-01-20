@@ -1,0 +1,17 @@
+.main__wrapper_contacts {
+    height: 665px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    display: flex;
+}
+
+.main__wrapper_contacts h1 {
+    font-size: 2.7rem;
+}
+
+.main__wrapper_contacts iframe {
+    margin: 0 auto;
+    border: 2px solid #757575;
+}

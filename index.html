@@ -21,7 +21,7 @@
                                 src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down"></a>
                         <div class="header__dropdown_html header__dropdown">
                             <a href="#" class="route">HTML тести для новачків</a>
-                            <a href="#" class="route">HTML продвинуті тести</a>
+                            <a href="#" class="route">HTML ускладнені тести</a>
                         </div>
                     </li>
                     <li class="header__item header__item_css"><a href="#app-css" class="route">CSS <img
@@ -37,6 +37,7 @@
                             <a href="#" class="route">JS тести для новачків</a>
                             <a href="#" class="route">JS продвинуті тести</a>
                             <a href="#" class="route">ES6 тести</a>
+                            <a href="#" class="route">Flexbox тести</a>
                         </div>
                     </li>
                     <li class="header__item header__item_contact"><a href="#app-contacts" class="route">Контакти</a>
@@ -100,9 +101,6 @@
             <main class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
-                        <!-- <div class="main__crumb">Головна</div>
-                        <div class="main__crumb">HTML</div>
-                        <div class="main__crumb main__crumb_current">Середній</div> -->
                     </div>
                     <div class="main__assortment">
                         <select name="sort" class="main__sort main__select">
@@ -118,15 +116,9 @@
                     </div>
                 </div>
                 <div class="main__wrapper">
-                    <h1>Головна</h1>
-                    <div class="main__item">1</div>
-                    <div class="main__item">2</div>
-                    <div class="main__item">3</div>
-                    <div class="main__item">4</div>
-                    <div class="main__item">5</div>
-                    <div class="main__item">6</div>
-                    <div class="main__item">7</div>
-                    <div class="main__item">8</div>
+                    <div class="main__item"><div class="main__img"><img src="./src/app/indexPage/images/javascript.webp" alt="test"></div><div class="main__caption">Test 1</div></div>
+                    
+                
                 </div>
             </main>
         </div>
@@ -135,9 +127,6 @@
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
-                        <!-- <div class="main__crumb">Головна</div>
-                        <div class="main__crumb">HTML</div>
-                        <div class="main__crumb main__crumb_current">Середній</div> -->
                     </div>
                     <div class="main__assortment">
                         <select name="sort" class="main__sort main__select">
@@ -153,7 +142,10 @@
                     </div>
                 </div>
                 <div class="main__wrapper">
-
+                    <div class="main__item"></div>
+                    <div class="main__item"></div>
+                    <div class="main__item"></div>
+                    <div class="main__item"></div>
                 </div>
             </div>
         </div>
@@ -162,9 +154,7 @@
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
-                        <!-- <div class="main__crumb">Головна</div>
-                        <div class="main__crumb">HTML</div>
-                        <div class="main__crumb main__crumb_current">Середній</div> --> 
+
                     </div>
                     <div class="main__assortment">
                         <select name="sort" class="main__sort main__select">
@@ -189,9 +179,7 @@
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
-                        <!-- <div class="main__crumb">Головна</div>
-                        <div class="main__crumb">HTML</div>
-                        <div class="main__crumb main__crumb_current">Середній</div> -->
+
                     </div>
                     <div class="main__assortment">
                         <select name="sort" class="main__sort main__select">
@@ -212,29 +200,20 @@
             </div>
         </div>
         <div id="app-contacts" class="page">
-            <h1>Contacts-page</h1>
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
-                        <!-- <div class="main__crumb">Головна</div>
-                        <div class="main__crumb">HTML</div>
-                        <div class="main__crumb main__crumb_current">Середній</div> -->
-                    </div>
-                    <div class="main__assortment">
-                        <select name="sort" class="main__sort main__select">
-                            <option value="0">Сортувати по:</option>
-                            <option value="sort1">sort1</option>
-                            <option value="sort2">sort2</option>
-                        </select>
-                        <select name="filter" class="main__filter main__select">
-                            <option value="0">Фільтрувати за:</option>
-                            <option value="filter1">filter1</option>
-                            <option value="filter2">filter2</option>
-                        </select>
                     </div>
                 </div>
-                <div class="main__wrapper">
-
+                <div class="main__wrapper main__wrapper_contacts">
+                    <h1>Наші контакти:</h1>
+                    <p>☎ <b>Телефон:</b> +38(093)-826-72-53</p>
+                    <p>@ <b>Email:</b> uleecsei@gmail.com</p>
+                    <p>↵ <b>Адреса:</b> вулиця Велика Житомирська, 22, Київ, 02000</p>
+                    <p></p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5877.903547890841!2d30.505759661858143!3d50.452973028975684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd78660bd6f149d6f!2z0JrQuNC10LLRgdC60LjQuSDQvtGE0LjRgQ!5e0!3m2!1sru!2sua!4v1578940613121!5m2!1sru!2sua"
+                        width="400" height="300" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -243,9 +222,7 @@
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
-                        <!-- <div class="main__crumb">Головна</div>
-                        <div class="main__crumb">HTML</div>
-                        <div class="main__crumb main__crumb_current">Середній</div> -->
+
                     </div>
                     <div class="main__assortment">
                         <select name="sort" class="main__sort main__select">
@@ -265,6 +242,7 @@
                 </div>
             </div>
         </div>
+
         <footer class="footer">
 
         </footer>
@@ -276,7 +254,6 @@
             <form class="login__form">
                 <h1>Зареєструватися</h1>
                 <div class="login__form__enter">Вже маєте аккаунт? <a href="#">Увійти</a></div>
-                <input type="text" class="login__form__name" placeholder="Ім'я">
                 <input type="email" class="login__form__email" placeholder="Пошта">
                 <input type="password" class="login__form__password" placeholder="Пароль">
                 <input type="submit" class="login__form__submit" value="Зареєструватися">
