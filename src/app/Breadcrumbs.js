@@ -15,7 +15,7 @@ function breadCrumbs(wrapper) {
     let element = document.createElement('div');
     switch (currentHash) {
         case '': {
-            mainCrumb.className = 'main_crumb main__crumb_current';
+            mainCrumb.className = 'main_crumb';
             break;
         }
         case '#html': {

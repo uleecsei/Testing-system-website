@@ -17,32 +17,35 @@
             <div class="header__logo"><a href="#" class="route">Tests<span class="header__span">FE</span>.ua</a></div>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item header__item_html"><a href="#app-html" class="route">HTML <img
+                    <li class="header__item header__item_html route"><a href="#app-html">HTML <img
                                 src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down"></a>
                         <div class="header__dropdown_html header__dropdown">
-                            <a href="#" class="route">HTML тести для новачків</a>
-                            <a href="#" class="route">HTML ускладнені тести</a>
+                            <a href="#html/easy/" class="route">HTML перевірка знань</a>
+                            <a href="#html/hard/" class="route">HTML ускладнена перевірка знань</a>
+                            <a href="#html/tags/" class="route">HTML основні теги тести</a>
                         </div>
                     </li>
-                    <li class="header__item header__item_css"><a href="#app-css" class="route">CSS <img
+                    <li class="header__item header__item_css route"><a href="#app-css">CSS <img
                                 src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down"></a>
                         <div class="header__dropdown_css header__dropdown">
-                            <a href="#" class="route">CSS тести для новачків</a>
-                            <a href="#" class="route">CSS продвинуті тести</a>
+                            <a href="#css/easy/" class="route">CSS перевірка знань</a>
+                            <a href="#css/hard/" class="route">CSS ускладнена перевірка знань</a>
+                            <a href="#css/parameter/" class="route">CSS тести на параметри</a>
+                            <a href="#css/flexbox/" class="route">Flexbox</a>
+                            <a href="#css/grid/" class="route">Grid</a>
                         </div>
                     </li>
-                    <li class="header__item header__item_javascript"><a href="#app-js" class="route">JavaScript <img
+                    <li class="header__item header__item_javascript route"><a href="#app-js">JavaScript <img
                                 src="./src/app/indexPage/images/arrow-down.png" alt="arrow-down"></a>
                         <div class="header__dropdown_js header__dropdown">
-                            <a href="#" class="route">JS тести для новачків</a>
-                            <a href="#" class="route">JS продвинуті тести</a>
-                            <a href="#" class="route">ES6 тести</a>
-                            <a href="#" class="route">Flexbox тести</a>
+                            <a href="#js/easy/" class="route">JS перевірка знань</a>
+                            <a href="#js/hard/" class="route">JS ускладнена перевірка знань</a>
+                            <a href="#js/dom/" class="route">Тести на знання DOM</a>
                         </div>
                     </li>
-                    <li class="header__item header__item_contact"><a href="#app-contacts" class="route">Контакти</a>
+                    <li class="header__item header__item_contact route"><a href="#app-contacts">Контакти</a>
                     </li>
-                    <li class="header__item header__item_profile"><a href="#" class="route"><img
+                    <li class="header__item header__item_profile route"><a href="#"><img
                                 src="./src/app/indexPage/images/profile-icon.png" alt="profile-icon">Профіль</a></li>
                 </ul>
             </nav>
@@ -116,14 +119,25 @@
                     </div>
                 </div>
                 <div class="main__wrapper">
-                    <div class="main__item"><div class="main__img"><img src="./src/app/indexPage/images/javascript.webp" alt="test"></div><div class="main__caption">Test 1</div></div>
-                    
-                
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/javascript.webp" alt="test"></div>
+                        <div class="main__caption"><a href="#">Тест с JavaScript для
+                                опытныхцйуйцуйцлуьйцдлуьлцдйуьдлцйулць</a></div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/javascript.webp" alt="test"></div>
+                        <div class="main__caption"><a href="#">Test 1</a></div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/javascript.webp" alt="test"></div>
+                        <div class="main__caption"><a href="#">Test 1</a></div>
+                    </div>
+
+
                 </div>
             </main>
         </div>
         <div id="app-html" class="page">
-            <h1>HTMLpage</h1>
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
@@ -142,19 +156,26 @@
                     </div>
                 </div>
                 <div class="main__wrapper">
-                    <div class="main__item"></div>
-                    <div class="main__item"></div>
-                    <div class="main__item"></div>
-                    <div class="main__item"></div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/html.png" alt="test"></div>
+                        <div class="main__caption"><a href="#html/easy/" class="route">HTML перевірка знань</a></div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/html.png" alt="test"></div>
+                        <div class="main__caption"><a href="#html/hard/" class="route">HTML ускладнена перевірка
+                                знань</a></div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/html.png" alt="test"></div>
+                        <div class="main__caption"><a href="#html/tags/" class="route">HTML основні теги тести</a></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="app-css" class="page">
-            <h1>CSSpage</h1>
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
-
                     </div>
                     <div class="main__assortment">
                         <select name="sort" class="main__sort main__select">
@@ -170,12 +191,32 @@
                     </div>
                 </div>
                 <div class="main__wrapper">
-
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/css.png" alt="test"></div>
+                        <div class="main__caption"><a href="#css/easy/" class="route">CSS перевірка знань</a></div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/css.png" alt="test"></div>
+                        <div class="main__caption"><a href="#css/hard/" class="route">CSS ускладнена перевірка знань</a>
+                        </div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/css.png" alt="test"></div>
+                        <div class="main__caption"><a href="#css/parameter/" class="route">CSS тести на параметри</a>
+                        </div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/css.png" alt="test"></div>
+                        <div class="main__caption"><a href="#css/flexbox/" class="route">Flexbox</a></div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/css.png" alt="test"></div>
+                        <div class="main__caption"><a href="#css/grid/" class="route">Grid</a></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="app-js" class="page">
-            <h1>JSpage</h1>
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">
@@ -195,7 +236,19 @@
                     </div>
                 </div>
                 <div class="main__wrapper">
-
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/js.png" alt="test"></div>
+                        <div class="main__caption"><a href="#js/easy/" class="route">JS перевірка знань</a></div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/js.png" alt="test"></div>
+                        <div class="main__caption"><a href="#js/hard/" class="route">JS ускладнена перевірка знань</a>
+                        </div>
+                    </div>
+                    <div class="main__item">
+                        <div class="main__img"><img src="./src/app/indexPage/images/js.png" alt="test"></div>
+                        <div class="main__caption"><a href="#js/dom/" class="route">Тести на знання DOM</a></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,7 +271,6 @@
             </div>
         </div>
         <div id="app-profile" class="page">
-            <h1>Profile-page</h1>
             <div class="main">
                 <div class="main__tools">
                     <div class="main__breadcrumbs">

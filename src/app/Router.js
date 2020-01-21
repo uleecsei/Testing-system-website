@@ -1,79 +1,74 @@
 let Router = {
     routes: {
-        "#": "indexPage",
-        "html": "htmlPage",
-        "css": "cssPage",
-        "js": "jsPage",
-        "contacts": "contactsPage",
-        "profile": "profilePage"
+        "#": "drawPage",
+        "html": "drawPage",
+        "css": "drawPage",
+        "js": "drawPage",
+        "contacts": "drawPage",
+        "profile": "drawPage",
+        "html/:tag/": "drawInnerPage",
+        "css/:tag/": "drawInnerPage",
+        "js/:tag/": "drawInnerPage",
     },
     pages: document.querySelectorAll('.page'),
     init: function () {
         this._routes = [];
         for (let route in this.routes) {
-            var methodName = this.routes[route];
+            let methodName = this.routes[route];
             this._routes.push({
-                pattern: new RegExp(route + '$'),
+                pattern: new RegExp(route.replace(/:\w+/, '(\\w+)') + '$'),
                 callback: this[methodName],
-                route
+                path: route
             });
-        }
+        };
     },
     nav: function (path) {
         var i = this._routes.length;
         while (i--) {
             var args = path.match(this._routes[i].pattern);
             if (args) {
-                this._routes[i].callback.call(this, this._routes[i].route);
+                this._routes[i].callback.call(this, this._routes[i]);
                 return;
             }
         }
     },
     drawPage: function (route) {
         Array.prototype.forEach.call(this.pages, function (item) {
-            if (item.id == "app-" + route) {
+            debugger;
+            if (item.id == 'app-' + route.path) {
                 item.className = 'show-page page';
+                window.location.hash = route.path;
             } else {
                 item.className = 'page';
             }
+            if (route.path == "" || route.path == "#") {
+                let index = document.getElementById('app-index');
+                index.className = 'show-page page';
+                window.location.hash = "";
+            }
         })
     },
-    indexPage: function (route) {
-        window.location.hash = "";
-        this.drawPage();
-        document.getElementById('app-index').className = 'show-page page';
-    },
-    htmlPage: function (route) {
-        window.location.hash = "html";
-        this.drawPage(route);
-    },
-    cssPage: function (route) {
-        window.location.hash = "css";
-        this.drawPage(route);
-    },
-    jsPage: function (route) {
-        window.location.hash = "js";
-        this.drawPage(route);
-    },
-    contactsPage: function (route) {
-        window.location.hash = "contacts";
-        this.drawPage(route);
-    },
-    profilePage: function (route) {
-        window.location.hash = "profile";
-        this.drawPage(route);
+    drawInnerPage: function (route) {
+
     }
 }
 Router.init();
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     Router.nav(window.location.hash);
 });
 let triggers = document.querySelectorAll('.route');
 Array.prototype.forEach.call(triggers, function (item) {
-    item.parentNode.addEventListener('click', function (event) {
-        event.preventDefault();
-        Router.nav(event.currentTarget.firstChild.href);
-    });
+    if (item.localName == 'li') {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            Router.nav(event.currentTarget.firstChild.href);
+        });
+    } else if (item.localName == 'a') {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            Router.nav(event.currentTarget.href);
+        });
+    }
 });
 window.addEventListener('hashchange', function () {
     Router.nav(window.location.hash);
