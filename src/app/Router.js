@@ -34,7 +34,6 @@ let Router = {
     },
     drawPage: function (route) {
         Array.prototype.forEach.call(this.pages, function (item) {
-            debugger;
             if (item.id == 'app-' + route.path) {
                 item.className = 'show-page page';
                 window.location.hash = route.path;
