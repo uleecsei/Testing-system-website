@@ -109,9 +109,12 @@ body {
     cursor: unset;
 }
 
-.main__crumb_current::before {
+.main__crumb:not(:first-child)::before {
     content: '→';
     display: inline-block;
     margin: 0 5px;
 }
 
+.main__test-answer {
+    margin-top: 30%;
+}

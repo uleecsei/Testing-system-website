@@ -34,3 +34,7 @@
 .test-form__description {
     display: inline-block;
 }
+
+.test-form__code {
+    text-align: left;
+}

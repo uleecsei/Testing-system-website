@@ -8,7 +8,6 @@ import './app/contentPage/main/main_content.js';
 import './app/Router.js';
 
 import './app/indexPage/header/header.css';
-import './app/indexPage/header/header.js';
 
 import './app/indexPage/slider/slider.css';
 import './app/indexPage/slider/slider.js'

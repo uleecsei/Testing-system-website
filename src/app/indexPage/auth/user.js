@@ -1,25 +1,25 @@
 import firebase from 'firebase/app';
 
-const auth = {
-    state: {
-        user: null
-    },
-    mutations: {},
-    actions: {
-        async registerUser (commit, email, password){
-            const user = await firebase.auth().createUserWithEmailAndPassword(email,password);
-            console.log(user);
-        }
-    },
-    getters: {
-        user (state) {
-            return state.user;
-        },
-        checkUser (state) {
-            return state.user !== null;
-        }
-    }
-}
+// const auth = {
+//     state: {
+//         user: null
+//     },
+//     mutations: {},
+//     actions: {
+//         async registerUser (commit, email, password){
+//             const user = await firebase.auth().createUserWithEmailAndPassword(email,password);
+//             console.log(user);
+//         }
+//     },
+//     getters: {
+//         user (state) {
+//             return state.user;
+//         },
+//         checkUser (state) {
+//             return state.user !== null;
+//         }
+//     }
+// }
 let form = document.querySelector('.login__form');
 let email = document.querySelector('.login__form__email');
 let pass = document.querySelector('.login__form__password');
@@ -40,7 +40,7 @@ form.onsubmit = function () {
       });
 }
 
-async function friend (email, password) {
-    const user = await firebase.auth().createUserWithEmailAndPassword(email,password);
-    console.log(user);
-}
+// async function friend (email, password) {
+//     const user = await firebase.auth().createUserWithEmailAndPassword(email,password);
+//     console.log(user);
+// }
