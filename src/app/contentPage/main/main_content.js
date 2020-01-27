@@ -1,6 +1,11 @@
 import firebase from 'firebase';
 
 let currentPage = null;
+let defaultPages = {
+    html: [],
+    css: [],
+    js: []
+};
 
 window.addEventListener('load', function () {
     currentPage = document.getElementsByClassName('show-page')[0];
@@ -8,7 +13,7 @@ window.addEventListener('load', function () {
 
 window.addEventListener('hashchange', function (event) {
     currentPage = document.getElementsByClassName('show-page')[0];
-    // drawDefaultPages(event.newURL);
+    drawDefaultPages(event.newURL);
 });
 
 const dbRefObject = firebase.database().ref().child('object');
@@ -19,6 +24,28 @@ window.addEventListener('load', function () {
         addContentInner(snap.val());
     });
 })
+
+function drawDefaultPages(url) {
+    let mainWrapper = currentPage.getElementsByClassName('main__wrapper')[0];
+    if(/#html$/.test(url) && defaultPages.html.length != 0){
+        clearElements(mainWrapper);
+        defaultPages.html.forEach((item) => {
+            mainWrapper.appendChild(item);
+        })
+    }
+    if(/#css$/.test(url) && defaultPages.css.length != 0){
+        clearElements(mainWrapper);
+        defaultPages.css.forEach((item) => {
+            mainWrapper.appendChild(item);
+        })
+    }
+    if(/#js$/.test(url) && defaultPages.js.length != 0){
+        clearElements(mainWrapper);
+        defaultPages.js.forEach((item) => {
+            mainWrapper.appendChild(item);
+        })
+    }
+}
 
 function addContentIndex(data) {
     let htmlTests = {
@@ -87,108 +114,108 @@ function addContentInner(data) {
     //Header references to the section
     routeItemsHeader[0].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperHTML, indexContent[0], indexContent[1]);
+        buildMain(mainWrapperHTML, "html", indexContent[0], indexContent[1]);
     });
 
     routeItemsHeader[1].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperHTML, indexContent[2], indexContent[3]);
+        buildMain(mainWrapperHTML, "html", indexContent[2], indexContent[3]);
     });
 
     routeItemsHeader[2].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperHTML, indexContent[4]);
+        buildMain(mainWrapperHTML, "html", indexContent[4]);
     });
 
     routeItemsHeader[3].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperCSS, indexContent[5], indexContent[6]);
+        buildMain(mainWrapperCSS, "css", indexContent[5], indexContent[6]);
     });
 
     routeItemsHeader[4].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperCSS, indexContent[7], indexContent[8]);
+        buildMain(mainWrapperCSS, "css", indexContent[7], indexContent[8]);
     });
 
     routeItemsHeader[5].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperCSS, indexContent[9]);
+        buildMain(mainWrapperCSS, "css", indexContent[9]);
     });
 
     routeItemsHeader[6].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperCSS, indexContent[10]);
+        buildMain(mainWrapperCSS, "css", indexContent[10]);
     });
 
     routeItemsHeader[7].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperCSS, indexContent[11]);
+        buildMain(mainWrapperCSS, "css", indexContent[11]);
     });
 
     routeItemsHeader[8].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperJS, indexContent[12], indexContent[13]);
+        buildMain(mainWrapperJS, "js", indexContent[12], indexContent[13]);
     });
 
     routeItemsHeader[9].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperJS, indexContent[14], indexContent[15]);
+        buildMain(mainWrapperJS, "js", indexContent[14], indexContent[15]);
     });
 
     routeItemsHeader[10].addEventListener('click', function (event) {
         event.preventDefault();
-        buildMain(mainWrapperJS, indexContent[16]);
+        buildMain(mainWrapperJS, "js", indexContent[16]);
     });
 
     //HTML page references to the section
     routeItemsHTML[0].addEventListener('click', function (event) {
-        buildMain(mainWrapperHTML, indexContent[0], indexContent[1]);
+        buildMain(mainWrapperHTML, "html", indexContent[0], indexContent[1]);
     });
 
     routeItemsHTML[1].addEventListener('click', function (event) {
-        buildMain(mainWrapperHTML, indexContent[2], indexContent[3]);
+        buildMain(mainWrapperHTML, "html", indexContent[2], indexContent[3]);
     });
 
     routeItemsHTML[2].addEventListener('click', function (event) {
-        buildMain(mainWrapperHTML, indexContent[4]);
+        buildMain(mainWrapperHTML, "html", indexContent[4]);
     });
 
     //CSS page references to the section
     routeItemsCSS[0].addEventListener('click', function (event) {
-        buildMain(mainWrapperCSS, indexContent[5], indexContent[6]);
+        buildMain(mainWrapperCSS, "css", indexContent[5], indexContent[6]);
     });
 
     routeItemsCSS[1].addEventListener('click', function (event) {
-        buildMain(mainWrapperCSS, indexContent[7], indexContent[8]);
+        buildMain(mainWrapperCSS, "css", indexContent[7], indexContent[8]);
     });
 
     routeItemsCSS[2].addEventListener('click', function (event) {
-        buildMain(mainWrapperCSS, indexContent[9]);
+        buildMain(mainWrapperCSS, "css", indexContent[9]);
     });
 
     routeItemsCSS[3].addEventListener('click', function (event) {
-        buildMain(mainWrapperCSS, indexContent[10]);
+        buildMain(mainWrapperCSS, "css", indexContent[10]);
     });
 
     routeItemsCSS[4].addEventListener('click', function (event) {
-        buildMain(mainWrapperCSS, indexContent[11]);
+        buildMain(mainWrapperCSS, "css", indexContent[11]);
     });
 
     //JS page references to the section
     routeItemsJS[0].addEventListener('click', function (event) {
-        buildMain(mainWrapperJS, indexContent[12], indexContent[13]);
+        buildMain(mainWrapperJS, "js", indexContent[12], indexContent[13]);
     });
 
     routeItemsJS[1].addEventListener('click', function (event) {
-        buildMain(mainWrapperJS, indexContent[14], indexContent[15]);
+        buildMain(mainWrapperJS, "js", indexContent[14], indexContent[15]);
     });
 
     routeItemsJS[2].addEventListener('click', function (event) {
-        buildMain(mainWrapperJS, indexContent[16]);
+        buildMain(mainWrapperJS, "js", indexContent[16]);
     });
 
-    function buildMain(main, ...elements) {
-        clearElements(main);
+    function buildMain(main, type, ...elements) {
+        clearElements(main, type);
         for (let i = 0; i < elements.length; i++) {
             main.appendChild(elements[i]);
         }
@@ -402,7 +429,14 @@ function setTimer(mainWrapper, answers) {
     mainWrapper.appendChild(timer);
 }
 
-function clearElements(parent) {
+function clearElements(parent, type) {
+    if (type && defaultPages[type].length == 0) {
+        let elements = parent.querySelectorAll('.main__item');
+        for (let i = 0; i < elements.length; i++) {
+            defaultPages[type].push(parent.removeChild(elements[i]));
+        }
+        return;
+    }
     let currentChild = parent.children.length - 1;
     while (parent.children.length) {
         parent.children[currentChild].remove();

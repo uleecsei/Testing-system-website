@@ -105,7 +105,7 @@
     top: 60px;
     text-align: start;
     padding: 5px;
-    box-shadow: 0px 10px 9px -1px rgba(0,0,0,0.67);
+    box-shadow: 0px 10px 9px -1px rgba(0, 0, 0, 0.67);
 }
 
 .header__dropdown a {
@@ -124,9 +124,33 @@
 .header__item_html:hover .header__dropdown_html {
     display: flex;
 }
+
 .header__item_javascript:hover .header__dropdown_js {
     display: flex;
 }
+
 .header__item_css:hover .header__dropdown_css {
     display: flex;
+}
+
+.hide-menu {
+    display: none;
+}
+
+.hide-menu__button {
+    display: none;
+}
+
+.hide-menu>label {
+    height: 22px;
+    display: inline-block;
+}
+
+.header__list.shown {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.header.shown {
+    height: 460px;
 }
