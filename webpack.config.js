@@ -9,8 +9,6 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        // Удалить при сдаче
-        publicPath: "/dist/"
     },
     optimization: {
         minimize: true,

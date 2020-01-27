@@ -24,3 +24,4 @@ import './app/indexPage/currentTest/test.css';
 
 import './app/Search-And-Filter.js'
 import './app/Breadcrumbs.js';
+import './app/indexPage/mediaQueries/mq.css';
