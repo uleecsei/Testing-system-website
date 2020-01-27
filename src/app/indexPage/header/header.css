@@ -71,11 +71,11 @@
     width: 70%;
 }
 
-.header__search {
+.search {
     margin: 18px auto;
 }
 
-.header__search>.search {
+.search>.search__input {
     height: 20px;
     border-radius: 5px;
     width: 130px;
@@ -83,16 +83,16 @@
     vertical-align: top;
 }
 
-.header__search .search-submit {
+.search .search__submit {
     display: none;
 }
 
-.header__search>label {
+.search>label {
     display: inline-block;
     margin: 3px;
 }
 
-.header__search>label:hover {
+.search>label:hover {
     cursor: pointer;
 }
 

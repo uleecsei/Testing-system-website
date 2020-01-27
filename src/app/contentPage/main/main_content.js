@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
 
 window.addEventListener('hashchange', function (event) {
     currentPage = document.getElementsByClassName('show-page')[0];
-    drawDefaultPages(event.newURL);
+    // drawDefaultPages(event.newURL);
 });
 
 const dbRefObject = firebase.database().ref().child('object');
@@ -19,7 +19,6 @@ window.addEventListener('load', function () {
         addContentInner(snap.val());
     });
 })
-
 
 function addContentIndex(data) {
     let htmlTests = {
@@ -48,7 +47,6 @@ function addContentIndex(data) {
     appendTestNodes(jsTests, mainWrapper);
 
 }
-
 
 function addContentInner(data) {
     const routeItemsHeader = document.getElementsByClassName("header__list")[0].getElementsByClassName("route");
@@ -195,66 +193,6 @@ function addContentInner(data) {
             main.appendChild(elements[i]);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-function drawDefaultPages(url){
-    let mainWrapper = document.querySelectorAll('show-page main__wrapper');
-    if(/#html$/.test(url)){
-        
-    }
-    if(/#css$/.test(url)){
-
-    }
-    if(/#js$/.test(url)){
-
-    }
 }
 
 function appendTestNodesInner(testsObject) {
@@ -288,7 +226,7 @@ function createNode(obj, type) {
     image.alt = obj.url;
     image.src = "./src/app/indexPage/images/" + type + ".png";
 
-    ref.href = "#";
+    ref.href = obj.url;
     ref.innerText = obj.name;
 
     caption.appendChild(ref);

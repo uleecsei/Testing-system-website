@@ -83,7 +83,7 @@ Array.prototype.forEach.call(routeSection, function (item) {
     }
 });
 window.addEventListener('hashchange', function () {
-    Router.nav(window.location.hash);
+    Router.nav(window.location.hash ? window.location.hash : "#");
 });
 let routesTriggers = document.querySelectorAll('.route');
 Array.prototype.forEach.call(routesTriggers, function (item) {
